@@ -59,3 +59,9 @@ typings/
 
 # next.js build output
 .next
+
+# Benchmark artifacts
+out/
+isolate-*.log
+jit-*.dump
+jitted*.so

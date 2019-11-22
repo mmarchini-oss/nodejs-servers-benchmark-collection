@@ -1,0 +1,23 @@
+{
+  "name": "servers-benchmark-collection",
+  "version": "0.1.0",
+  "description": "Collection of Node.js servers benchmark, with helper scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmarchini/nodejs-servers-benchmark-collection.git"
+  },
+  "author": "Matheus Marchini <mmarchini@netflix.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmarchini/nodejs-servers-benchmark-collection/issues"
+  },
+  "homepage": "https://github.com/mmarchini/nodejs-servers-benchmark-collection#readme",
+  "dependencies": {
+    "autocannon": "^4.4.0",
+    "autocannon-compare": "^0.4.0"
+  }
+}

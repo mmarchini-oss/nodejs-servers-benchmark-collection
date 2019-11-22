@@ -1,0 +1,6 @@
+[submodule "benchmarks/fastify"]
+	path = benchmarks/fastify
+	url = https://github.com/fastify/benchmarks
+[submodule "benchmarks/restify"]
+	path = benchmarks/restify
+	url = https://github.com/mmarchini/node-restify

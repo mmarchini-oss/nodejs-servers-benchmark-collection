@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+npm ci
+
+pushd ./benchmarks/fastify
+npm install
+popd
+
+pushd ./benchmarks/restify/benchmark
+npm install
+popd
