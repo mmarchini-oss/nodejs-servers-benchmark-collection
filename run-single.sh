@@ -39,11 +39,12 @@ function run() {
 
   # Start the server & get PID
   start_bench "$node" "$BENCH"
+  ps aux | grep -v slack | grep -v grep | grep node
   pid="$(pgrep -P "$$" node)"
 
   # Run autocannon, alternatively wrapped with a script to capture metrics
   out="out/$SERVER_NAME.json"
-  AUTOCANNON=(./autocannon "$out" -c 100 -p 10 -d 1 --json localhost:3000)
+  AUTOCANNON=(./autocannon "$out" -c 100 -p 10 -d 40 --json localhost:3000)
   if [ -n "${SCRIPT[*]}" ]; then
     "${SCRIPT[@]}" "$pid" "${AUTOCANNON[@]}"
   else
