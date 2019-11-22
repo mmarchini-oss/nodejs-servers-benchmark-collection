@@ -3,7 +3,6 @@
 # This script is inteded to be used with the flag --perf-prof.
 # You probably want a custom Node.js build if you're looking into this file.
 
-set -x
 set -e
 
 PID=$1

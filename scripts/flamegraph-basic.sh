@@ -3,7 +3,6 @@
 # This script is inteded to be used when Node.js flag --perf-basic-prof is
 # enabled.
 
-set -x
 set -e
 
 PID=$1
