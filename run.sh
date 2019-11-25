@@ -3,18 +3,24 @@
 set -e
 
 function cleanup {
-  pkill -P "$$" node
+  if pgrep -P "$$" node; then
+    echo 1
+    pkill -P "$$" node
+    echo 2
+  fi
 }
 
 trap cleanup EXIT
 
 OLD=$1
-SUITE=${2:-restify}
-BENCH=${3:-restify}
-shift 3
+NEW=$2
+SUITE=${3:-restify}
+BENCH=${4:-restify}
+shift 4
 SCRIPT=( "$@" )
 
 test -n "$OLD"
+test -n "$NEW"
 # test -n "$SCRIPT"
 test -n "$SUITE"
 test -n "$BENCH"
@@ -55,4 +61,9 @@ function run() {
 }
 
 run "$OLD"
-echo "$out"
+a="$out"
+run "$NEW"
+b="$out"
+
+npx autocannon-compare "$a" "$b" > out/results.json
+cat out/results.json

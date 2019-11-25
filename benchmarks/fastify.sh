@@ -10,3 +10,16 @@ function start_bench() {
   popd
   return
 }
+
+function get_url() {
+  bench="$1"
+  echo "localhost:3000"
+}
+
+function list() {
+  echo "fastify"
+  echo "restify"
+  echo "express"
+  echo "hapi"
+  echo "bare"
+}

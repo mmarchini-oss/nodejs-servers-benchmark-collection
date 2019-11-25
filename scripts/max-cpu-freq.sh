@@ -20,4 +20,6 @@ function bench_stop() {
 
 bench_start
 "$@"
+status="$?"
 bench_stop
+exit "$status"
