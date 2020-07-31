@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/mmarchini/nodejs-servers-benchmark-collection.git"
   },
-  "author": "Matheus Marchini <mmarchini@netflix.com>",
+  "author": "Mary Marchini <mmarchini@netflix.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mmarchini/nodejs-servers-benchmark-collection/issues"
